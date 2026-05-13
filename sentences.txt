@@ -1,0 +1,25 @@
+"Hello, world!"
+
+"I can't do this."
+
+"Let's meet at 10:00 a.m.!"
+
+"She said: 'Well... err, fine.'"
+
+"The quick brown fox jumps over 13 lazy dogs?"
+
+"这是一个测试。"
+
+"안녕하세요 (Hello in Korean)!"
+
+"Emoji: 🤖 loves AI ❤️!"
+
+"The numbers 1234 and 5,678.90 are mixed."
+
+"Rare word: sesquipedalianism."
+
+"Special chars: e-mail@example.com #hashtag."
+
+"¿Dónde está la biblioteca?"
+
+"Coöperate naïvely on Noël's day."

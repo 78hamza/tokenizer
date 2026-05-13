@@ -2,9 +2,9 @@ import sentencepiece as spm
 
 
 class SPM:
-    def __int__(self, texts: list) -> None:
+    def __init__(self, texts: list) -> None:
         self.file = "sentences.txt"
-        self.sp_uni = spm.SentencePieceTrainer(model_file='spm_unigram.model')
+        self.sp_uni = None
         self.texts: list = texts
 
     # Train on raw text file (required from the sentencepiece)
@@ -20,9 +20,19 @@ class SPM:
     # train unigram model
     def train_unigram_model(self) -> None:
         spm.SentencePieceTrainer.train(
-            input=self.file, model_prefix='spm_unigram',
-            vocab_size=50, model_type='unigram'
+            input=self.file,
+            model_prefix='spm_unigram',
+            vocab_size=90,
+            model_type='unigram'
+        )
+
+        self.sp_uni = spm.SentencePieceProcessor(
+            model_file='spm_unigram.model'
         )
 
     def sp_uni_encode(self, text) -> tuple:
-        return self.sp_uni.encode_as_pieces(text), self.sp_uni.encode_as_ids(text)
+        
+        return (
+            self.sp_uni.encode_as_pieces(text),
+            self.sp_uni.encode_as_ids(text)
+        )
